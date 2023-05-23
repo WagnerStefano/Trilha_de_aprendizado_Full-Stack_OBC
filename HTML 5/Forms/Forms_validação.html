@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <h2>Encontre no Google</h2>
+    <form action="https://www.google.com/search">
+        <label for="q">O que deseja pesquisar</label>
+        <input type="text" id="q" name="q" placeholder="Nasa, SpaceX, pesquise aqui" required> <!--a Tag required faz com que para seguir com a pesquisa o campo esteja necessariamente preenchido-->
+        <input type="submit" value="Pesquisar">
+    </form>
+
+<br><br>
+                        <!-- exemplo form com confirmação de email-->
+
+    <form action="https://www.google.com/search">
+        <label for="q">Insira o EMAIL</label>
+        <input type="email" id="q" name="q" placeholder="Insira seu EMAIL" required>
+        <input type="submit" value="Enviar">
+    </form>     
+
+    <br><br>
+
+                        <!-- Exemplo form validação Min e Max-->
+    
+                 <form action="https://www.google.com/search">
+                    <label for="q">Insira valores entre 0 e 18</label>
+                    <input type="number" id="q" name="q" placeholder="n°" min="0" max="18">
+                    <input type="submit" value="Enviar">
+                </form>     
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+                    Flex container
+    Flex container é um dos metodos de organização de Layout, possibilitando
+a manipulação de itens dentro de um container de forma dinâmica, então independente dos itens dentro de um container todos vão acabar se adaptando a ele.
+    então com uma proposta de melhorar a responsividade de um site o Flex container tem a objetividade de possibilitar a alteração de um container udando seu Layout e não deformando as propriedades de um item dentro des container sem a necessidade do Media-Query.
+as aplicações que criamos são acessadas por diversos dispositivos com dimensões diferentes.
+
+
+Manipulando CSS Flex-container:
+                    um costume interessaante no inicio de cada projeto é zerar é zerar o margin e padding utilizand o 
+                    *{
+                        margin:0;
+                        padding:0;
+                    }
+                    podemos também adicionar o Box-sizing que é o modo em que os itens da pagina serão renderizados
+                    *{
+                      margin:0;
+                      padding:0;
+                      box-sizing: border-box;
+                     }   
+                     o border-box representa algumas propriedades de espaçamento dentro do box-sizing, e isso ajuda com melhores alinhamentos dentro da pagina nas tags padding, margin etc.
+
+    para melhor responsividade utilizamos o vh (View port height) pois os pixeis(px) tendem a não ser tão responsivos ou terem processos mais complexos para alcançar esta responsividade.
+
+Definindo o Flex-container
+    iniciamos editando o Display que é a forma em que os itens serão organizados, podemos escolher entre    display: flex;
+                                                    block;
+                                                    flexbox;
+                                                    grid;
+                                                    inline;
+                                                    list-item;
+    entre outras, flex e flexbox são basicamente a mesma, o flex é mais usado por conta de sua praticidade.
+Com o Flex definido
+    podemos partir para o direcionamento onde vemos o Column, Column reverse que alem de inverter os itens também os alinha no canto oposto ao de seu inicio, seu ponto de partida então seria alterado do topo para o bottom, e o mesmo acontece com o Row e Row-reverse, porém agora os objetos do container estariam alinhados em linha da direita para esquerda(row) e da esquerda para a direita (row-reverse).
+           --------------------------------------------->
+          _______________________________________________
+     |   |R||O||W||_||_||_||_||_||_||_||_||_||_||_||_||_|   /|\
+     |   |_||_||_||_||_||_||_||_||_||_||_||_||_||_||E||_|    |
+     |   |C||_||_||_||_||_||_||_||_||_||_||_||_||_||s||N|    |
+     |   |O||_||_||_||_||_||_||_||_||_||_||_||_||_||R||M|    |
+     |   |L||_||_||_||_||_||_||_||_||_||_||_||_||_||E||U|    |
+     |   |U||_||_||_||_||_||_||_||_||_||_||_||_||_||V||L|    |
+     |   |M||_||_||_||_||_||_||_||_||_||_||_||_||_||E||O|    |
+    \|/  |N||_||_||_||_||_||_||_||_||_||_||_||_||_||R||C|
+         |_||_||_||_||_||E||S||R||E||V||E||R||-||W||O||R|        
+          _______________________________________________
+          <---------------------------------------------
+    
+Entendendo o Gap
+    o Gap é o espaçamento entre os itens, podemos utiizar o row-gap para itens que precisem de espaçamento em linha e da mesma forma temos o column-gap que é o espaçamento entre os itens alinhados em column, podemos utilizar apenas a sintaxe do Gap que traria o espaçamente tanto no Row quando no Column.
+    
+Justify-content
+    Justify-content é um alinhamento horizontal do flex-container, aqui temos possibilidades de alinhamento como Justify-content:center;
+                                                      : end;
+                                                      : start;
+    o justify-content: end; alinha o conteudo no fim da pagina mantendo sua altura e alterando apenas o posicionamento horizontal, da mesma forma temos o justify-content: start; que alinha os itens no inicio da pagina de forma padrão e por fim o justify-content: center; que alinha os itens no centro da pagina, é recomendado(até mesmo pelo Vscode) que quando o star ou end for usado esteja após um flex, por exemplo flex-start ou flex-end (justify-content: flex-start; / justify-content: flex-end;), está questão do flex não se aplicaria ao justify-content: center;.
+
+outras formas de alterar o espaçamento entre o conteudo seriam space around,  space between e space evenly
+    o justify-content: space-around; faz com que os itens tenham o mesmo espaçamento entre eles incluindo um espaçamento em seu inicio e fim para que os itens não fiquem colados nas extremidades da pagina.
+
+    já o justify-content: space-between; deixa os itens com o maior espaçamento possivel entre eles aproveitando inclusive o inicio e fim da pagina não deixando um espaço vazio nas extremidades de inicio e fim (esquerda e direita(estar e end)).
+
+    bem parecido com o justify-content: space-around; o justify-content: space- evenly; cria espaçamentos iguais entre os itens tanto no inicio, meio ou fim todos os espaçamentos terão o mesmo espaçamento e sempre de forma igualitaria.
+
+algumas diferenças
+    no justify-content ocorrem quando usamos o flex-direction: column; e   justify-content: center;, esse combo faz com que os itens fiquem alinhados em coluna ao lado esquerdo da tela e centralizados de forma vertical e não mais de forma horizontal.
+
+Align-items
+    uma sintaxe(conjunto) que anda de maõs dadas com o justify-content: ; é o align-items: ; que tem a mesma função do justify-content porem  agora alinhando de forma vertical, então o align-items: center; alinharia os itens no centro da pagina alterando apenas as proporções verticais e não mais horizontais como o justify-content, as mesmas funções do justify-content se aplicam no align-items como align-items: flex-start; que os deixaria iniciando no topo da pagina, align-items: flex-end; que os faria iniciar no rodapé da pagina.
+
+    outra funcionalidade do align-items é o strech(align-items: strech;) que basicamente estica os elementos verticalmente quando não há definição de altura (height: ;), esta é uma funcionalidade do align-items então não fica disponivel nativamente no justify-content: ; mas há uma maneira de replica-la no justify-content que funciona da seguinte forma
+    no .container inserimos o flex-direction: column; e no .item reincerimos o height mas agora removendo o width e assim conseguimos o alongamento horizontal fazendo com que o "strech" esteja ativado tanto verticalmente quanto horizontalmente.
+
+Flex-Wrap
+    o Flex-Wrap é a quebra do conteudo dentro do container, então o flex-wrap: wrap; é utilizado quando precisamos que os itens quebrem enquanto a pagina diminuito e torne os itens responsivos, normalmente o conteudo tem a pré configuração de flex-wrap: nowrap; que faz com que os itens não quebrem para caber na no container, essa responsividade vem acompanhada do min-height que daria margem para que a quebra ocorra e para que os itens diminuam até um tamanho especifico
+
+                        11:00

@@ -1,0 +1,48 @@
+.img-content{
+    width: 765px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-content{
+    font-size:18px;
+    font-family: Limelight, italic;
+}
+
+/*começando a inserção do media query*/
+
+@media (max-width:795px){ 
+
+    .img-content{
+        width: 100%;
+        height: auto;
+    }
+    .text-content{
+        font-size: 12px;
+    }
+
+}/*no @media nos inserimos as adaptações que serão responsaveis pela responsividade
+exemplo:
+        quando o conteudo chegar a 795px a imagem ira se adaptar adquirindo as adaptações inseridas no @media mantendo as informações definidas pelo
+        img-content quando estiver acima dos 795px 
+        
+  Mas dessa forma temos um problema com o tamanho pois os "pixeis" não são responsivos então a solução sera a utilização da %*/
+@media(max-width: 510px){
+    .img-content{
+        width: 100%;
+        height: auto;
+    }/* quando o tamanho da pagina atingir 510px a pagina assumira as caracteristicas inseridas com o media de width: 100%; evitando a quebra ou distorção das imagens*/
+}/*responsividade em medidas seria um valor com %*/
+
+@media(max-width: 410px){
+    .text-content{
+        text-align: center;
+    } /*com este media query conseguimos centralizar o texto ao atingir a medida de 410px tornando o texto mais responsivo*/
+    /*.img-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }*/
+}

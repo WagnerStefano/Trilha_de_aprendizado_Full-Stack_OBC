@@ -1,0 +1,18 @@
+div{
+    color: blue;
+    border: 1px solid black ;
+}
+div ul li{
+    color: rgb(255, 166, 0);
+}
+
+/*sistema de herança funciona quando a tag "pai" transfere seus atributos para a tag "filho" conforme sua relevancia, então uma tag com div seri totalmente relevante pois não existem mais elementos, agora quando adicionamos mais elementos a tag como div ul li{} a tag recebe uma hierarquia e relevancia maior que a div, tudo que estiver dentro de ul li se tornará mais relevante que a div para assumir tais alterações de estilo com o CSS.
+    então para evitar que propriedades sejam herdadas e subscrevam outros atributos devemos implementar os atributos na div como o exemplo div ul li{}
+    seria também uma questão de especividade
+    
+existe também uma propriedade que informa que queremos fazer com que aqueles atributos sejam herdados por um elemento div com a tag inherit
+exeplo
+div ul {
+    boder: inherit;
+} faria com que o ul herdasse os atributos da div como uma borda, cor ou fonte do elemento pai e não precisaremos repassar as propriedades como 1px solid #black;.
+*/

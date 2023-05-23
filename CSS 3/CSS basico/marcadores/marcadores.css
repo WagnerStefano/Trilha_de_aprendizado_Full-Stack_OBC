@@ -1,0 +1,11 @@
+/**{
+    border: 2px;aplica o estilo a toda pagina, como por exemplo uma borda de 2px ou uma fonte ou cor 
+}
+apesar de ser muito usado temos outras maneiras de definir essas alterações totais
+*/
+
+/* como por exemplo o Seletor de descendência */
+
+li a{
+    color: rgb(255, 2, 179);
+}
