@@ -1,0 +1,7 @@
+Iniciamos o estudo sobre a manipulação dos flex-items, 
+
+
+iniciamos as alterações utilizando o mesmo layout de estudo com 4 itens, a primeira alteração é feita no item (css .item{}) inserindo o flex-basis, o flex-basis altera o tamanho base do item, para utiliza-lo precisamos remover o width do item para que o flex-basis funcione corretamente, o flex-basis e muito importante enquanto utilizarmos o flex-grow e flex-stream.
+
+Flex-Grow, utilizado quando buscamos que a quebra complete o
+2:43

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: darkgrey;
+    min-height: 100vh;
+    display: flex;
+
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    background-color: white;
+    display: flex;
+    align-items: center;/*centraliza na vertical*/
+    justify-content: center;/*centraliza na horizontal*/
+    /*isso faz com que cada item se torne um container com seus items centralizados, ajuda na centralização e caso queira remanejar algum  conteúdo*/
+}
