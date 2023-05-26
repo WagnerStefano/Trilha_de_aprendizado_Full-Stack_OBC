@@ -3,5 +3,31 @@ Iniciamos o estudo sobre a manipulação dos flex-items,
 
 iniciamos as alterações utilizando o mesmo layout de estudo com 4 itens, a primeira alteração é feita no item (css .item{}) inserindo o flex-basis, o flex-basis altera o tamanho base do item, para utiliza-lo precisamos remover o width do item para que o flex-basis funcione corretamente, o flex-basis e muito importante enquanto utilizarmos o flex-grow e flex-stream.
 
-Flex-Grow, utilizado quando buscamos que a quebra complete o
-2:43
+Flex-Grow, sendo ativado com o a linha flex-grow: 1; é utilizado quando buscamos que a quebra preencha todo o espaço horizontal, entao quando houver a quebra o item que estiver em baixo automaticamente assume o valor base de width que foi inserido para quebra, no caso a quebra ocorre em 600px logo os items de cima mantiveram seu tamanho e o quem estiver em baixo tera 600px para preencher a base 
+
+             _____________         _____________         _____________
+            |             |       |             |       |             |
+            |             |       |             |       |             |
+            |             |       |             |       |             |
+            |_____________|       |_____________|       |_____________|
+
+                                        |  |
+                                        |  |     
+                                       \|  |/
+                                        \  /
+                                         \/
+                                  quebra em 600px
+                         _____________         _____________         
+                        |             |       |             |      
+                        |             |       |             |       
+                        |             |       |             |       
+                        |_____________|       |_____________|       
+                             ___________________________
+                            |                           |      
+                            |        Flex-Grow          |       
+                            |                           |       
+                            |___________________________|       
+            
+(qualquer valor diferente de 1 não ativa a função de quebra do flex-grow, então por padrão a tag tem o valor zero(flex-grow: 0; o que não ativa o preenchimento de quebra, já quando inserimos o valor 1 o preenchimento de quebra é ativado com flex-grow: 1; )).
+
+
