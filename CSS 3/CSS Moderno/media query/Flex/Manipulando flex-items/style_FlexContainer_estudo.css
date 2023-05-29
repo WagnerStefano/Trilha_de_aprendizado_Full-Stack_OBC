@@ -8,14 +8,14 @@
     background-color: darkgrey;
     min-height: 100vh;
     display: flex;
-
     gap: 10px;
     justify-content: center;
     align-items: center;
+    /* flex-direction: column; */
 }
 
 .item{
-    /* width: 200px; */
+    width: 100vh;
     height: 200px;
     border: 2px solid;
     background-color: white;
@@ -23,21 +23,27 @@
     align-items: center;/*centraliza na vertical*/
     justify-content: center;/*centraliza na horizontal*/
     /*isso faz com que cada item se torne um container com seus items centralizados, ajuda na centralização e caso queira remanejar algum  conteúdo*/
-    flex-basis: 200px;
+    justify-content: center;
+    align-items: center;
 }
 
 .item1{
-
+    order: 2;
+    align-self: flex-start;
 }
 
 .item2{
-
+    order: 1;
 }
 
 .item3{
-
+    order: 3;
 }
-
-.item4{
-
+@media(max-width: 390px){
+    item2{
+        flex: 1 0 620px; /*exemplo de responsividade para o iPhone 12*/
+    }
 }
+/* .item4{
+
+} */

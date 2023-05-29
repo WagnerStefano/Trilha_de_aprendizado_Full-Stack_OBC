@@ -1,7 +1,7 @@
 Iniciamos o estudo sobre a manipulação dos flex-items, 
 
 
-iniciamos as alterações utilizando o mesmo layout de estudo com 4 itens, a primeira alteração é feita no item (css .item{}) inserindo o flex-basis, o flex-basis altera o tamanho base do item, para utiliza-lo precisamos remover o width do item para que o flex-basis funcione corretamente, o flex-basis e muito importante enquanto utilizarmos o flex-grow e flex-stream.
+iniciamos as alterações utilizando o mesmo layout de estudo com 4 itens, a primeira alteração é feita no item (css .item{}) inserindo o flex-basis, o flex-basis altera o tamanho base do item, para utiliza-lo precisamos remover o width do item para que o flex-basis funcione corretamente, o flex-basis e muito importante enquanto utilizarmos o flex-grow e flex-shrink.
 
 Flex-Grow, sendo ativado com o a linha flex-grow: 1; é utilizado quando buscamos que a quebra preencha todo o espaço horizontal, entao quando houver a quebra o item que estiver em baixo automaticamente assume o valor base de width que foi inserido para quebra, no caso a quebra ocorre em 600px logo os items de cima mantiveram seu tamanho e o quem estiver em baixo tera 600px para preencher a base 
 
@@ -31,3 +31,41 @@ Flex-Grow, sendo ativado com o a linha flex-grow: 1; é utilizado quando buscamo
 (qualquer valor diferente de 1 não ativa a função de quebra do flex-grow, então por padrão a tag tem o valor zero(flex-grow: 0; o que não ativa o preenchimento de quebra, já quando inserimos o valor 1 o preenchimento de quebra é ativado com flex-grow: 1; )).
 
 
+Flex-shrink
+     o flex-srink: ;, esta ligado diretamente a diminuição dos itens, da mesma forma que o Flex-grow funciona com numerações 0 e 1 o flex-shrink: ; também utiliza numeclaturas mas em sua base utilizamos o 1 e 2, por padrão o flex-shrink é listado como 1 (flex-shrink: 1;) que significa que todos os itens irão diminuir igualmente, já listando o flex-shrink como 2 significa que o item 1 ira diminuir mais que os outros e após uma determindada quantidade de pixels(limitada no flex-basis) os demais itens diminuirão normalmente (para que funcione o no container não pode existir o flex-warp pois quebraria os itens impossibilitando a diminuição proporcionada pelo flex-shrink).
+
+
+Flex
+     após vermos o Flex-Basis, Flex-Grow e Flex-Shrink entendemos que tudo pode ser alcançado utilizando o Flex, sim simplesmente o Flex resume todas essas funcionalidades apenas utilizando suas coordenadas, por exemplo flex: 1 0 200px;
+
+     .item2{
+    flex: 1 0 200;
+}
+
+     aqui vemos o uso do flex, vemos que os valores coordenados são 1 para o flex-grow, que fará com que o item 2 ocupe todo o espaço que estiver disponivel para ele.
+
+     o 0 que assume a função do flex-shrink que não diminuirá pois sua função não se ativa com o valor 0.
+
+     e o 200px que se refere ao flex-basis que altera o tamanho base(inicial) do item, então quando o tamanho minimo da pagina for atingido o item 2 manterá proporções, muito util quando queremos que o item não fique com tamanho menor que o definido e assim limitando sua diminuição.
+
+     Como o item 2 ocupara todo o espaço sobressalente podemos ver que não existe mais espaçamento no header ou footer da pagina, esta manipulação é muito util quando queremos inserir todo o conteudo da pagina dentro do item 2, no item 1 o Header e no item 3 o Footer, então independente da quantidade de itens que houver no item 2 não haverá sobra de espaço e sempre estará alinhado e centralizado ocupando toda a pagina e evitando sobras indesejadas.
+
+Order
+     o Order como seu nome sugere, manipula a ordem dos items como no exemplo a seguir
+                         .item1{
+                                 order: 2;
+                             }
+
+                             .item2{ 
+                                 order: 1;
+                             }
+
+                             .item3{
+                                 order: 3;
+                             }
+     essa sequência apresentada alteraria a ordem os itens em item 1 ficaria no meio da pagina, item 2 ficaria no topo e item 3 ficaria no rodapé da pagina, esta alteração é aplicada independente do alinhamento como column ou row.
+
+Align-Self 
+     o Align-Self é um novo modelo de organização, como seu nome sugere é um alinhamento próprio (na vertical), uma ferramenta muito util quando queremos alterar apenas 1 dos items do container.
+
+     Aula 9 ✓
