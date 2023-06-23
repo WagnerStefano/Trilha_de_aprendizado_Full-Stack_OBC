@@ -1,0 +1,67 @@
+                                Aqui iniciamos o estudo sobre o Grid
+                    
+            Grid um organizador de Layout, em CSS como o Flex-box, o Grid tem sua propriedade de divisão com Linhas e Colunas um pouco diferente da divisão de linhas e colunas do Flex-box, um pouco mais especifica, organizada e talvez um pouco mais maleavel ou fixa(dependendo da aplicação), no Flex-box temos as direções que podemos dar a cada item, porém utilizando o Grid podemos dimensionar as linhas e colunas fazendo com que uma linha ocupe toda a parte superior enquanto 2 linhas podemo ocupar o espaço inferior e assim por diante.
+
+                                        Exemplo
+            ____________________________________________________________________
+            |                                                                  |
+            |                         Item 1 - Grid                            |
+            |                                                                  |
+            |__________________________________________________________________|
+             __________________    ____________________________________________
+            |                  |  |                                            |
+            |   Item 2 - Grid  |  |               Item 3 - Grid                |
+            |                  |  |                                            |
+            |__________________|  |____________________________________________|
+             _________________________________________    _____________________
+            |                                         |  |                     |
+            |               Item 4 - Grid             |  |    Item 5 - Grid    |
+            |                                         |  |                     |
+            |_________________________________________|  |_____________________|
+            ____________________________________________________________________
+            |                                                                  |
+            |                         Item 6 - Grid                            |
+            |                                                                  |
+            |__________________________________________________________________|
+
+            esse leyaout poderia servir como base para um Blog simples, mesmo já conhecendo o Flex-box e suas capacidades, a melhor formar de se criar um Header ou Footer não seria utilizando o Grid mas utilizando o Flex-box onde criamos o Header inserindo o Flex-box para manipulação de seus componentes em um container.
+
+            o Grid é muito utilizado quando queremos ter uma divisão de linhas e colunas, por exemplo um contendo um conteudo principal e uma side-bar, com as propriedades do Grid podemos alinha-las e manipula-las alterando o Layout do conteudo, ou separar o conteudo como um texto e uma imagem lado a lado porém separados por conteudos que trabalhariam em uma melhor responsividade em caso de quebra de conteudo.
+
+
+                              Definindo colunas com o Grid 
+            para denifir colunas com o Grid utilizamos o Display:Grid; seguido pelo Grid-template-columns: 25% 50% 25%; que irá gerar as colunas com propriedades limitadas por essas porcentagens, gerando 3 coluns a primeira preenchendo 25% do espaço, a segunda preenchendo 50% e a terceira 25%.               exemplo:
+             __________________________________________________________________
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |      25%      |               50%               |      25%       |
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |               |                                 |                |
+            |_______________|_________________________________|________________|
+
+            para utilização do espaçamento no Grid é importante utilizar % ou Frames por conta da responsividade, assim o projeto fica mais responsivo e atende melhor as boas praticas.
+                então podemos obter o resultado acima utilizando a seginte linha
+            
+            grid-template-columns: 25% 50% 25%;  (utilizando %)
+                            ou
+            grid-template-columins: 1fr 2fr 1fr; (utilizando frames)
+                em relação aos Frames podemos utilizar também a propriedade Repeat porém com uma pequena desvantagem pois não poderiamos alterar os tamanho das colunas como fazemos usando % exemplo:
+            grid-template-columns: repeat(3, 1fr); 
+                essa proportção retornaria 3 colunas com 1 frame cada.
+            
+                            Entendendo o Gap - Grid Display
+            
+                no Grid também encontramos o Gap, de formas parecidas com o
+            Flex-box, como row-gap: ;, column-gap: ; e somente gap: ;
+            utilizaremos o Gap pois fica mais facil de observalo por conta da sua propriedade geral onde podemos alterar suas proporções orientando coordenadas, por exemplo (gap: 5px 10px;  5 Pixeis sendo aplicados as linhas e 10 pixeis aplicados as colunas)
+                em relação as linhas podemos alterar também com 
+            grid-template-rows: ; também podemos utilizar % ou Frames.
+            aula 14 restando 01:09
