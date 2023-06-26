@@ -64,4 +64,7 @@
             utilizaremos o Gap pois fica mais facil de observalo por conta da sua propriedade geral onde podemos alterar suas proporções orientando coordenadas, por exemplo (gap: 5px 10px;  5 Pixeis sendo aplicados as linhas e 10 pixeis aplicados as colunas)
                 em relação as linhas podemos alterar também com 
             grid-template-rows: ; também podemos utilizar % ou Frames.
-            aula 14 restando 01:09
+                minmax(); uma propriedade que define tamanho minimo e maximo dos
+            pixeis, por não serem responsivos como %, precisamos delimitar certas quebras e tamanhos minimos e maximos para que o objeto se adeque ao projeto mantendo a responsividade
+                exemplo grid-uto-rows: minmax(210px, 100%); onde o minimo das
+            linhas ocupará 210 pixeis e o maximo ocupará 100%, ao atingir o minimo o uma barra de rolagem sera ativada facilitando a visualização caso o conteudo seja maior que os 210 pixeis
