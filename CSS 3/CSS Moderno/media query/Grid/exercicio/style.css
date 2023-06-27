@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    background-color: darkgrey;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    /* grid-template-columns: repeat(4,1fr); */
+    gap: 5px 10px;
+    grid-auto-rows: minmax(210px, auto);
+}
+
+.item{
+    border: 2px solid black;
+    background-color: white;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+/* para executar o exercicio utilizamos a mesma base de estudos, e como vimos nas propriedades
+do Grid podemos utilizar %, fr e Pixeis, para atingir o resultado solicitado no exercicio 
+utilizaremos os Frames (fr) na seguinte composição 1fr 2 fr 1 fr 1fr onde o segundo espaço
+ficará com 2 frames gerando uma diferença, por conta das colunas ficaremos com 2 espaços vazios no canto inferior direito.
+    no grid-auto-rows utilizamos as propriedades de pixeis, auto e minmax, utilizaremos o auto no minmax para que não haja um bug no espaçamento fazendo com que o texto ultrapasse o limite do bloco e o comando ficaria da seguinte maneira
+            grid-auto-rows:minmax( px, auto);
+     */
