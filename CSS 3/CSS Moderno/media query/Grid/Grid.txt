@@ -73,7 +73,7 @@
                o Grid Column basicamente define o tamanho da coluna com
             suas proporções especificas, como por exemplo 
             grid-column: 1/4; que faz com que o item em que foi inserido ocupe todo o espaço de sua coluna, contando as linhas para definir suas proporções que seriam de 1 para 4 que seria como a pagina é dividida (4 linhas), podemos também utilizar as proporções 1/3, essa mistura de proporções traria seguinte resultado:
-       L1                    L2                     L3                     L4
+       C1                    C2                     C3                     C4
          __________________________________________________________________
         |                                                                  |
         |                    Item 1 (proporção 1/4)                        |
@@ -95,7 +95,37 @@
         |                   |  |                   |  |                   |
         |___________________|  |___________________|  |___________________|
 
-             (L1 - Linha 1, L2 - Linha 2, L3 - Linha 3, L4 - Linha 4)  
+             (C1 - Coluna 1, C2 - Coluna 2, C3 - Coluna 3, C4 - Coluna 4)  
             
             Com tais manipulações podemos alcançar diverças alterações de Layout como visto acima.
-                            Aula 16 4:40
+        
+                                Grid Row 
+                Grid Row, o grid-row: ; altera as linhas enquanto o
+            grid-column: ; altera as colunas, sabendo isso podemos  aplica-lo e da mesma maneira que o grid column utilizando Frames, porcentagens ou pixeis, por questões de responsividade o mais indicado é utilizar Frames ou %, sua alterações ocorrem em linhas (horizontais)
+            dessa forma aplicamos grid-row: 3/5; fazendo com que ela preencha os espaços entre as linhas 3 e 5.
+                                     Exemplo:
+
+       C1                    C2                     C3                     C4
+    L1   __________________________________________________________________
+        |                                                                  |
+        |                    Item 1 (proporção 1/4)                        |
+        |                    .item{grid-column:14;}                        |
+        |__________________________________________________________________|
+    L2   ___________________     __________________________________________
+        |                   |   |                                          |
+        |     Item 2 Grid   |   |          Item 3 (proporção 2/4)          |
+        |                   |   |          .item{grid-column:14;}          |
+        |___________________|   |__________________________________________|
+    L3   __________________________________________    ___________________  
+        |                                          |  |                   | 
+        |                                          |  |   Item Grid       |
+        |                                          |  |                   |
+        |            Item 4 Proporções             |  |___________________|
+    L4  |         .item{grid-column:1/3;}          |   ___________________  
+        |         .item4{grid-row:3/5;}            |  |                   | 
+        |                                          |  |   Item Grid       |
+        |                                          |  |                   |
+        |__________________________________________|  |___________________|
+    L5
+            Devemos respeitar os espaços disponiveis, caso não sejam 
+        respeitados haverá uma quebra no código pois determinamos 6 itens e caos o código passe  informação maior que 6 itens eles não serão alocados no espaço e ficarão bugados, em caso em que os itens ocupem mais espaço que o definido as linhas/colunas serão redimensionados gerando uma linha a mais para acomodar aquele item, o que pode gerar alguns espaços entre os itens já manipulados.
