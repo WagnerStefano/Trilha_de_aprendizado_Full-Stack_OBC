@@ -1,0 +1,3 @@
+                            Projeto Flex-Box/Grid
+        esse txt servirá para anotações sobre o projeto em que aplicarei o que
+    estudei sobre flex-box e grid, será um sité com algumas seções e espaçamento dividido pelo grid 

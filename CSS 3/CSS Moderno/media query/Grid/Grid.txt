@@ -109,7 +109,7 @@
     L1   __________________________________________________________________
         |                                                                  |
         |                    Item 1 (proporção 1/4)                        |
-        |                    .item{grid-column:14;}                        |
+        |                    .item{grid-column:1/4;}                       |
         |__________________________________________________________________|
     L2   ___________________     __________________________________________
         |                   |   |                                          |
@@ -129,3 +129,21 @@
     L5
             Devemos respeitar os espaços disponiveis, caso não sejam 
         respeitados haverá uma quebra no código pois determinamos 6 itens e caos o código passe  informação maior que 6 itens eles não serão alocados no espaço e ficarão bugados, em caso em que os itens ocupem mais espaço que o definido as linhas/colunas serão redimensionados gerando uma linha a mais para acomodar aquele item, o que pode gerar alguns espaços entre os itens já manipulados.
+
+                            Grid Template Areas
+            Uma maneira mais simples de criar os exemplos vistos anteriormente 
+        onde conseguimos definir o teamplate de forma mais visual, como por exemplo :
+                     .container{ grid-template-areas:
+                             HTML
+                      "grid-template-areas:                                     "item1 item1 item1"
+                      "item2 item2 item3"
+                      "item2 item2 item4"
+                      "item5 item5 item5"
+                      "item5 item5 item5"
+                      "item6 item8 item8"
+                      "item7 item8 item8"
+                      "item9 item9 item9";"}
+
+                             CSS
+                     .item1{ grid-area: item1;}
+            Usando essas propriedades do grid-template-area podemos obter o mesmo resultado do grid-column mas de maneira mais visual e acredito que mais facil de se fazer e entender a disposição dos itens no Grid
