@@ -146,4 +146,4 @@
 
                              CSS
                      .item1{ grid-area: item1;}
-            Usando essas propriedades do grid-template-area podemos obter o mesmo resultado do grid-column mas de maneira mais visual e acredito que mais facil de se fazer e entender a disposição dos itens no Grid
+            Usando essas propriedades do grid-template-area podemos obter o mesmo resultado do grid-column mas de maneira mais visual e acredito que mais facil de se fazer e entender a disposição dos itens no Grid.
