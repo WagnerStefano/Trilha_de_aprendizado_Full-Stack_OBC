@@ -1,0 +1,90 @@
+nesse modulo aprenderemos 
+|
+|     _______________________________________
+|    |                                       |
+|----|Fundamentos do JavaScript e Programação|
+     |_______________________________________|
+                        |
+                        |
+      __________________|____________________
+     |                                       |
+     |          Lógica de Programação        |
+     |_______________________________________|
+                |              |           |
+ _______________|____________  |   ________|__________
+|                            | |  |                   |
+|   Estruturas de Controle   | |  |      Arrays       |
+|____________________________| |  |___________________|
+                               |
+                               |
+              ________________ | __________________
+              |                                    |
+              |                                    |
+   ___________|____________             ___________|____________  
+  |                        |           |                        |   
+  |        Objetos         |           |         Funções        |   
+  |________________________|           |________________________|   
+
+
+
+                                JavaScript
+        Uma Linguagem de alto nivel com algumas particularidades,
+    já foi conhecido como ECMAScript porém o nome JavaScript se popularizou
+    trazendo a linguagem ao seu estado atual, uma linguagem multiparadigma, isso diz que a linguagem aceita diferentes formas de escrita para seu código assim combinando mais de um paradigma podemos chegar a diferentes resoluções para o mesmo problema e utilizando a melhor para o momento da aplicação.
+        A principal linguagem de programação utilizada em navegadores, assim
+    firmando a base em HTML, CSS e JavaScript, também pode ser usada fora dos navegadores atraves de runtimes como o Node.js que já é atribuido aos navegadores e permite essa execução de JavaScript fora do navegador.
+
+
+                              Tipos de Dados JS
+        No JavaScript assim como em outras linguagens os dados podem ser 
+    representados de diferentes formas, quando falamos em dados nos referimos a valores e informações que utilizamos e manipulamos dentro das aplucações, porém precisamos tomar cuidado pois essas informações aparecem de diferentes formas, formas essas que seriam:
+        - Primitivos, seriam informações mais simples como String, Boolean,
+             Null e Undefined, Number e Bigint
+
+             - String: "Olá, mundo!" é uma string que representa uma sequência de caracteres.
+
+            - Boolean: true ou false são valores booleanos que representam uma condição lógica.
+
+            - Null: Quando uma variável não tem um valor atribuído, ela pode ser nula.
+
+            - Undefined: Se uma variável é declarada, mas não recebe nenhum valor, ela é undefined.
+
+            - Number: 10 é um exemplo de número inteiro, e 3.14 é um exemplo de número de ponto flutuante.
+
+            - BigInt: 9007199254740991n é um exemplo de número inteiro muito grande que excede o limite do tipo Number, aplicando o n ao fim do número podemos ver sua resposta normalmente apenas com um N no fim do número.
+
+                              Variáveis
+        As variaveis armazenam dados para serem utilizados pelo código quando 
+    solicitado, podemos referencia-las por palavras especificas do JavaScrip, podemos referenciar as variaveis por Var, Let e Const. EXEMPLO:
+                        var nome = "Wagner"
+                com essa variavel reservamos a palavra var e atribuimos
+                o nome Wagner a ela então sempre que chamar a variavel Var
+                o nome Wagner que foi atribuido será devolvido.
+
+        Da mesma forma podemos usar o Let atribuindo uma variavel a um valores
+                EXEMPLO:
+                let idade = 24
+        O Let seria uma maneira mais atual de atribuir variaveis mas seu uso continua igual ao Var
+
+        Outro metodo de criar Variaveis é o Const, porém o mesmo tem uma 
+    peculiaridade pois salva valores constantes, sua construção segue a 
+    mesma base do Var e Let
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
