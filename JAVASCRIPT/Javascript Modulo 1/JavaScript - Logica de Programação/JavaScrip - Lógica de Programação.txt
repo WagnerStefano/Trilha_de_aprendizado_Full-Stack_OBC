@@ -67,9 +67,57 @@ nesse modulo aprenderemos
         O Let seria uma maneira mais atual de atribuir variaveis mas seu uso continua igual ao Var
 
         Outro metodo de criar Variaveis é o Const, porém o mesmo tem uma 
-    peculiaridade pois salva valores constantes, sua construção segue a 
-    mesma base do Var e Let
+    peculiaridade pois salva valores constantes então não mudam, sua construção segue a mesma base do Var e Let
 
+                                Nomeando Variaveis
+        Um ponto muito importante quando programamos algo é a sua nomeclatura,
+    podemos nomear as variaveis de diferentes maneiras mas devemos buscar nomes com significados pois faremos programas com centenas de linhas e nomear as variaveis com nomes significativos facilita o entendimento do código tanto para o criador quando para alguem que seguira dando manutenção, além de manter as boas praticas.
+
+
+
+                                Operadores e Expressões
+        Operadores permitem as intereações entre valores que foram atribuidos a
+    variaveis, podemos realizar: 
+                                Operações aritméticas:
+                    + Adição: Realiza a adição de dois valores.
+                    - Subtração: Realiza a subtração de dois valores.
+                    * Multiplicação: Realiza a multiplicação de dois valores.
+                    / Divisão: Realiza a divisão de dois valores.
+                    % Módulo: Retorna o resto da divisão entre dois valores.
+                    ++ Incremento: Incrementa o valor de uma variável em 1.
+                    -- Decremento: Decrementa o valor de uma variável em 1.
+
+                                Operadores de Atribuição:
+                    = Atribuição: Atribui um valor a uma variável.
+                    += Atribuição com Adição: Adiciona um valor a uma variável existente.
+                    -= Atribuição com Subtração: Subtrai um valor de uma variável existente.
+                    *= Atribuição com Multiplicação: Multiplica um valor por uma variável existente.
+                    /= Atribuição com Divisão: Divide uma variável existente por um valor.
+                    %= Atribuição com Módulo: Atribui o resultado do módulo a uma variável existente.
+                    
+                                Operações de Comparação:
+                    == Igual a: Compara se dois valores são iguais.
+                    === Estritamente igual a: Compara se dois valores são iguais e do mesmo tipo.
+                    != Diferente de: Compara se dois valores são diferentes.
+                    !== Estritamente diferente de: Compara se dois valores são diferentes ou de tipos diferentes.
+                    > Maior que: Verifica se um valor é maior que outro.
+                    < Menor que: Verifica se um valor é menor que outro.
+                    >= Maior ou igual a: Verifica se um valor é maior ou igual a outro.
+                    <= Menor ou igual a: Verifica se um valor é menor ou igual a outro.
+
+                                Operadores Lógicos:
+                    && AND Lógico: Retorna verdadeiro se ambas as expressões forem verdadeiras.
+                    || OR Lógico: Retorna verdadeiro se pelo menos uma das expressões for verdadeira.
+                    ! NOT Lógico: Inverte o valor de uma expressão.
+                    Operadores de Concatenação:
+
+                    + Concatenação de Strings: Concatena duas strings.
+
+
+                                Anotações e Documentação
+                                     em JavaScript
+            Podemos usar os comentarios para deixar anotações ou observações 
+        que nos ajudem a entender o código e suas funções, podemos documentar o código também seguindo algumas regras tecnicas informando o que cada parte do código faz, pra que serve, o que faz e como utilizar cada parte do código, essa documentação facilita o entendimento e manutenção do código por terceiros ou em caso de futuros bugs ou implementação de novas features
 
 
 
